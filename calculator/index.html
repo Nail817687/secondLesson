@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 450px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            border: solid 2px black;
+            border-radius: 10px;
+            padding: 30px;
+            background-color: rgb(244, 166, 20);
+        }
+        form {
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+        form input {
+            padding: 10px;
+            border: solid 2px;
+            border-radius: 3px;
+        }
+        .divButton {
+            width: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .divButton input {
+            padding: 10px 50px;
+            border-radius: 8px;
+        }
+        p {
+            font-size: 25px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="">
+            <label for="num1"></label>
+            <input id="num1" type="text">
+            <label for="num2"></label>
+            <input id="num2" type="text">
+        </form>
+        <div class="total">
+            <p>0</p>
+        </div>
+        <div class="divButton">
+            <input id="plus" type="button" value="+">
+            <input id="minus" type="button" value="-">
+            <input id="divide" type="button" value="/">
+            <input id="multiply" type="button" value="*">
+            <input id="clear" type="button" value="Очистить">
+        </div>
+    </div>
+
+
+    <script>
+        let input1 = document.getElementById('num1');
+        let input2 = document.getElementById('num2');
+        let plus = document.getElementById('plus');
+        let minus = document.getElementById('minus');
+        let divide = document.getElementById('divide');
+        let multiply = document.getElementById('multiply');
+        let clear = document.getElementById('clear');
+        let total = document.querySelector('p');
+
+
+        console.dir(total)
+        // функции
+
+        function clearInput() {
+            input1.value = ''
+            input2.value = ''
+        }
+        function multiplyNum() {
+            let num1 = input1.value;
+            let num2 = input2.value; 
+            let sum = 0;
+            +(num1);
+            +(num2);
+            sum = num1 * num2;
+            console.log(sum);
+            total.textContent = sum
+        }
+        function plusNum() {
+            let num1 = input1.value;
+            let num2 = input2.value; 
+            let sum = 0;
+            +(num1);
+            +(num2);
+            sum = +num1 + +num2;
+            console.log(sum);
+            total.textContent = sum
+        }
+        function minusNum () {
+            let num1 = input1.value;
+            let num2 = input2.value; 
+            let sum = 0;
+            +(num1);
+            +(num2);            
+            sum = num1 - num2;
+            console.log(sum);
+            
+            total.textContent = sum
+        }
+        function divideNum() {
+            let num1 = input1.value;
+            let num2 = input2.value; 
+            let sum = 0;
+            +(num1);
+            +(num2);
+            sum = num1 / num2;
+            console.log(sum);
+            total.textContent = sum
+        }
+
+        clear.addEventListener('click', clearInput)
+        multiply.addEventListener('click', multiplyNum)
+        plus.addEventListener('click', plusNum)
+        minus.addEventListener('click', minusNum)
+        divide.addEventListener('click', divideNum)
+
+
+
+    </script>
+</body>
+</html>

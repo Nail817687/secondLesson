@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div></div>
+        <div>
+            <img src="./img/logo.png" id="logo" alt="logo">
+        </div>
+        <div class="login">
+            <button>изменить</button>
+        </div>
+    </header>
+
+
+    <main>
+        <h2>Введение в браузерные события</h2>
+        <p>Событие – это сигнал от браузера о том, что что-то произошло. Все DOM-узлы подают такие сигналы (хотя события бывают и не только в DOM).</p>
+        <p>Вот список самых часто используемых DOM-событий, пока просто для ознакомления:</p>
+
+        <h3>События мыши:</h3>
+        <ul>
+            <li>
+                <code>
+                    click
+                </code>
+                <p>
+                    происходит, когда кликнули на элемент левой кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).
+                </p>
+            </li>
+            <li>
+                <code>
+                    contextmenu
+                </code>
+                <p>
+                    происходит, когда кликнули на элемент правой кнопкой мыши.
+                </p>
+            </li>
+            <li>
+                <code>
+                    mouseover / mouseout
+                </code>
+                <p>
+                    когда мышь наводится на / покидает элемент.
+                </p>
+            </li>
+            <li>
+                <code>
+                    mousedown / mouseup
+                </code>
+                <p>
+                    когда нажали / отжали кнопку мыши на элементе.
+                </p>
+            </li>
+            <li>
+                <code>
+                    mousemove
+                </code>
+                <p>
+                    при движении мыши.
+                </p>
+            </li>
+        </ul>
+    </main>
+
+
+    <footer>
+        <div>
+
+        </div>
+        <form action="">
+            <label for="name">Имя</label>
+            <input id="name" placeholder="Введите имя пользовалетя" type="text">
+            <label for="email">Почта</label>
+            <input id="email" placeholder="Введите почту" type="text">
+            <label for="text">Текст</label>
+            <textarea re name="text" placeholder="Введите текст" id="text"></textarea>
+        </form>
+        <div class="source">
+            <h3>Источники:</h3>
+            <ul>
+                <li>
+                    <a class="jsSource" href="https://learn.javascript.ru/">JavaScript</a>
+                </li>
+                <li>
+                    <a class="jsSource" href="https://learn.javascript.ru/introduction-browser-events">JavaScript События</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        let button = document.querySelector('button')
+        let header = document.querySelector('header')
+        let footer = document.querySelector('footer')
+        let footerA = document.querySelectorAll('a')
+        let input = document.querySelectorAll('input')
+        let textArea = document.querySelector('textarea')
+        let main = document.querySelector('main')
+        let code = document.querySelectorAll('code')
+
+        let colorTheme = true
+        button.addEventListener('mousedown', buttonChangeColor)
+        function buttonChangeColor () {
+            button.style.background = 'gray'
+        }
+        button.addEventListener('mouseup', buttonReturnColor)
+        function buttonReturnColor() {
+            button.style.background = 'rgba(1, 1, 1, 0)'
+        }
+        button.addEventListener('click', changeTheme)
+        function changeTheme() {
+            if (colorTheme === true) {
+                colorTheme = false
+                document.body.style.background = 'rgb(30, 36, 70)'
+                header.style.background = 'rgb(30, 36, 60)'
+                header.style.color = 'rgb(197, 197, 197)'
+                button.style.color = 'rgb(197, 197, 197)'
+                footer.style.background = 'rgb(30, 36, 60)'
+                footer.style.color = 'rgb(197, 197, 197)'
+                footerA[0].style.color = 'red'
+                footerA[1].style.color = 'red'
+                input[0].style.background = 'rgb(33, 47, 119)'
+                input[0].style.border = 'rgb(30, 36, 70)'
+                input[1].style.background = 'rgb(33, 47, 119)'
+                input[1].style.border = 'rgb(30, 36, 70)'
+                textArea.style.background = 'rgb(33, 47, 119)'
+                textArea.style.border = 'rgb(30, 36, 70)'
+                main.style.background = 'rgb(30, 36, 70)'
+                main.style.color = 'rgb(197, 197, 197)'
+                for (let i = 0; i < code.length; i++) {
+                    code[i].style.color = 'rgb(250, 130, 19)'
+                    code[i].style.background = 'rgb(24, 9, 70)'
+                }
+            } else {
+                colorTheme = true
+                document.body.style.background = ''
+                header.style.background = ''
+                header.style.color = ''
+                button.style.color = ''
+                footer.style.background = ''
+                footer.style.color = ''
+                footerA[0].style.color = ''
+                footerA[1].style.color = ''
+                input[0].style.background = ''
+                input[0].style.border = ''
+                input[1].style.background = ''
+                input[1].style.border = ''
+                textArea.style.background = ''
+                textArea.style.border = ''
+                main.style.background = ''
+                main.style.color = ''
+                for (let i = 0; i < code.length; i++) {
+                    code[i].style.color = ''
+                    code[i].style.background = ''
+                }
+            }
+        }
+    </script>
+</body>
+</html>

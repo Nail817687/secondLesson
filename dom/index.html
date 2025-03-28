@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.body.style.background = 'aliceblue'
+        let div = document.createElement('div')
+        div.style.width = '600px';
+        div.style.height = '700px';
+        div.style.textAlign = 'center';
+        div.style.background = 'white';
+        div.style.margin = 'auto'
+        div.style.backgroundImage = 'url(./tree.jpg)'
+        div.style.backgroundRepeat = 'no-repeat'
+        div.style.backgroundSize = 'contain'
+        div.style.backgroundPosition = '0 -130px'
+
+        let img = document.createElement('img');
+        img.style.border = 'solid 8px rgb(255, 255, 255, 0.4)'
+        img.style.borderRadius = '120px'
+        img.src = './cats.jpg';
+        img.style.width = '200px'
+        img.style.position = 'relative'
+        img.style.top = '155px'
+
+        let h1 = document.createElement('h1')
+        h1.textContent = 'Script Eden'
+        h1.style.position = 'relative'
+        h1.style.top = '140px'
+        h1.style.color = 'rgb(100, 160, 215)'
+        h1.style.fontSize = '44px'
+
+        let text1 = document.createElement('p');
+        text1.textContent = 'Passionate designer'
+        text1.style.position = 'relative'
+        text1.style.top = '125px'
+        text1.style.fontSize = '22px'
+        text1.style.color = 'rgb(119, 136, 153)'
+
+        let text2 = document.createElement('p');
+        text2.textContent = 'Curious developer'
+        text2.style.position = 'relative'
+        text2.style.top = '120px'
+        text2.style.color = 'rgb(119, 136, 153)'
+
+        let text3 = document.createElement('p');
+        text3.textContent = 'Tech geek'
+        text3.style.position = 'relative'
+        text3.style.top = '120px'
+        text3.style.color = 'rgb(119, 136, 153)'
+
+        let socialDiv = document.createElement('div');
+        socialDiv.style.margin = 'auto'
+        socialDiv.style.width = '280px'
+        socialDiv.style.height = '60px'
+        socialDiv.style.position = 'relative'
+        socialDiv.style.top = '120px'
+        socialDiv.style.display = 'flex'
+        socialDiv.style.justifyContent = 'center'
+        socialDiv.style.gap = '5px'
+
+        let fbImg = document.createElement('img');
+        fbImg.src = './fb.png';
+        fbImg.style.width = '60px'
+
+        let tgImg = document.createElement('img');
+        tgImg.src = './tg.png';
+        tgImg.style.width = '60px'
+
+        let ybImg = document.createElement('img');
+        ybImg.src = 'yb.png';
+        ybImg.style.width = '60px'
+
+        let vkImg = document.createElement('img');
+        vkImg.src = 'vk.png';
+        vkImg.style.width = '60px'
+
+
+
+        div.append(img)
+        div.append(h1)
+        div.append(text1)
+        div.append(text2)
+        div.append(text3)
+        div.append(socialDiv)
+        socialDiv.append(fbImg)
+        socialDiv.append(tgImg)
+        socialDiv.append(ybImg)
+        socialDiv.append(vkImg)
+        document.body.append(div);
+    </script>
+</body>
+</html>

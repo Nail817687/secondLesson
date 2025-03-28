@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: plum;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .questionCard {
+            width: 350px;
+            height: auto;
+            padding: 10px;
+            display: flex;
+            border-radius: 5px;
+            flex-direction: column;
+            align-items: start;
+            background-color: aliceblue;
+        }
+        img {
+            width: 300px;
+        }
+        .width {
+            width: 800px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="width">
+        <div class="questionCard">
+            <img src="./img/kalen.webp" alt="">
+            <p>Сколько дней в году?</p>
+            <div>
+                <input type="radio" name="q1answer1" id="q1answer1">
+                <label for="q1answer1">365</label>
+                <input type="radio" name="q1answer2" id="q1answer2">
+                <label for="q1answer2">367</label>
+                <input type="radio" name="q1answer3" id="q1answer3">
+                <label for="q1answer3">363</label>
+                <input type="radio" name="q1answer4" id="q1answer4" checked>
+                <label for="q1answer4">364</label>
+            </div>
+        </div>
+        <div class="questionCard">
+            <img src="./img/kenedi.png" alt="">
+            <p>Когда умер Кенеди?</p>
+            <div>
+                <input type="radio" name="q2answer1" id="q2answer1">
+                <label for="q1answer1">22 ноября 1963 г.</label>
+                <input type="radio" name="q2answer2" id="q2answer2">
+                <label for="q2answer2">22 ноября 1962 г.</label>
+                <input type="radio" name="q2answer3" id="q2answer3">
+                <label for="q2answer3">22 июнь 1964 г.</label>
+                <input type="radio" name="q2answer4" id="q2answer4" checked>
+                <label for="q2answer4">20 ноября 1963 г.</label>
+            </div>
+        </div>
+        <div class="questionCard">
+            <img src="./img/water.webp" alt="">
+            <p>Химическа формула воды</p>
+            <div>
+                <input type="radio" name="q3answer1" id="q3answer1">
+                <label for="q3answer1">H2O</label>
+                <input type="radio" name="q3answer2" id="q3answer2">
+                <label for="q3answer2">O2H</label>
+                <input type="radio" name="q3answer3" id="q3answer3">
+                <label for="q3answer3">HO</label>
+                <input type="radio" name="q3answer4" id="q3answer4" checked>
+                <label for="q3answer4">O2</label>
+            </div>
+        </div>
+        <div class="questionCard">
+            <img src="./img/kish.jpg" alt="">
+            <p>Когда была создана группа КиШ?</p>
+            <div>
+                <input type="radio" name="q4answer1" id="q4answer1">
+                <label for="q4answer1">1988</label>
+                <input type="radio" name="q4answer2" id="q4answer2">
+                <label for="q4answer2">1982</label>
+                <input type="radio" name="q4answer3" id="q4answer3">
+                <label for="q4answer3">1981</label>
+                <input type="radio" name="q4answer4" id="q4answer4" checked>
+                <label for="q4answer4">1998</label>
+            </div>
+        </div>
+        <div class="questionCard">
+            <img src="./img/oleg.jpg" alt="">
+            <p>Сколько лет Олегу Елисеенкову</p>
+            <div>
+                <input type="radio" name="q5answer1" id="q5answer1">
+                <label for="q5answer1">66</label>
+                <input type="radio" name="q5answer2" id="q5answer2">
+                <label for="q5answer2">61</label>
+                <input type="radio" name="q5answer3" id="q5answer3">
+                <label for="q5answer3">62</label>
+                <input type="radio" name="q5answer4" id="q5answer4" checked>
+                <label for="q5answer4">68</label>
+            </div>
+        </div>
+        <div class="questionCard">
+            <img src="./img/jirik.jpg" alt="">
+            <p>Когда умер Жириновский?</p>
+            <div>
+                <input type="radio" name="q6answer1" id="q6answer1">
+                <label for="q6answer1">6 апреля 2022 г.</label>
+                <input type="radio" name="q6answer2" id="q6answer2">
+                <label for="q6answer2">2 апреля 2021 г.</label>
+                <input type="radio" name="q6answer3" id="q6answer3">
+                <label for="q6answer3">1 апреля 2024 г.</label>
+                <input type="radio" name="q6answer4" id="q6answer4" checked>
+                <label for="q6answer4">6 август 2022 г.</label>
+            </div>
+        </div>
+        <div class="questionCard">
+            <button id="total">
+                ПРОВЕРИТЬ
+            </button>
+            <p></p>
+        </div>
+    </div>
+    
+
+    <script>
+        let trueAnswer1 = document.getElementById('q1answer1');
+        let trueAnswer2 = document.getElementById('q2answer1');
+        let trueAnswer3 = document.getElementById('q3answer1');
+        let trueAnswer4 = document.getElementById('q4answer1');
+        let trueAnswer5 = document.getElementById('q5answer1');
+        let trueAnswer6 = document.getElementById('q6answer1');
+        let total = document.getElementById('total')
+        let answer = [trueAnswer1, trueAnswer2, trueAnswer3, trueAnswer4, trueAnswer5, trueAnswer6];
+
+        total.addEventListener('click', examination);
+
+        function examination() {
+            console.log('lol');
+            
+        }
+    </script>
+</body>
+</html>
